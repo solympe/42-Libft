@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 13:15:16 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:33:01 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/05 13:52:31 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/06 18:31:04 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_LIBFT_H
-#define LIBFT_LIBFT_H
+#include "libft.h"
 
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
+char	*ft_strdup(const char *src)
+{
+	int		i;
+	char	*arr;
 
-void	ft_memset(void *s, int c, size_t n);
-size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *src);
-
-#endif //LIBFT_LIBFT_H
+	i = 0;
+	arr = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
+	while (src[i])
+	{
+		arr[i] = src[i];
+		i++;
+	}
+	arr[i] = '\0';
+	return (arr);
+}

@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 13:15:16 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:33:01 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/06 17:58:08 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/06 18:11:49 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_LIBFT_H
-#define LIBFT_LIBFT_H
-
 #include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
 
-void	ft_memset(void *s, int c, size_t n);
-size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *src);
+size_t	ft_strlen(const char *s)
+{
+	size_t		i;
 
-#endif //LIBFT_LIBFT_H
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
