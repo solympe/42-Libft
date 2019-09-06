@@ -6,7 +6,13 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 18:27:54 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:27:56 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/06 18:59:00 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*strncpy(char *dest, const char *src, size_t n)
+{
+
+}

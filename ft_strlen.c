@@ -6,11 +6,11 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 17:58:08 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:11:49 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/06 18:12:00 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
