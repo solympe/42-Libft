@@ -6,27 +6,20 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 14:55:10 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:42:25 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/09 15:20:27 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <ctype.h>
 
-
-int main()
+int		main()
 {
-	void		*arr = "abcdef";
+	char *test = "2147483648";
+//	char *test = malloc(256);
+	printf("%s\n", test);
 
-	printf("%s\n\n", "Start testing: abcdef");
-
-	printf("%s\n", "Test ft_strlen");
-	printf("%zu\n\n", ft_strlen(arr));
-
-	printf("%s\n", "Test ft_strdup");
-	printf("%s\n\n", ft_strdup(arr));
-
-	printf("%s\n", "Test ft_strdup");
-	printf("%s\n\n", ft_strdup(arr));
-
+	printf("%d\n", ft_atoi(test));
+	return (0);
 }

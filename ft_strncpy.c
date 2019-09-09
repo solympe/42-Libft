@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 13:52:31 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:31:04 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/06 19:27:03 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/08 13:27:32 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	int		i;
-	char	*arr;
 
 	i = 0;
-	arr = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (arr == NULL)
-		return (arr);
-	while (src[i])
+	while (src[i] != '\0' && n != 0)
 	{
-		arr[i] = src[i];
+		if (!src[i])
+			dest[i] = 0;
+		else
+			dest[i] = src[i];
+		n--;
 		i++;
 	}
-	arr[i] = '\0';
-	return (arr);
+	dest[i] = '\0';
+	return (dest);
 }

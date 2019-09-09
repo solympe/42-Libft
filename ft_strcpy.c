@@ -6,13 +6,22 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 18:27:54 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:59:00 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/08 13:28:39 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strncpy(char *dest, const char *src, size_t n)
+char	*ft_strcpy(char *dest, const char *src)
 {
+	int		i;
 
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

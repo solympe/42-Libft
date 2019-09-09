@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 13:52:31 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:31:04 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/09 11:25:19 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/09 15:58:05 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int		i;
-	char	*arr;
+	size_t 				i;
+	unsigned char		*td;
+	const unsigned char	*ts;
 
 	i = 0;
-	arr = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (arr == NULL)
-		return (arr);
-	while (src[i])
+	td = (unsigned char *)dest;
+	ts = (unsigned char *)src;
+	if (ts < td)
 	{
-		arr[i] = src[i];
-		i++;
+		while (++i != n)
+			td[n - i] = ts[n - i];
 	}
-	arr[i] = '\0';
-	return (arr);
+	while (n-- != 0)
+	{
+		*td = *ts;
+		td++;
+		ts++;
+	}
+	return (dest);
 }

@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 13:52:31 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:31:04 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/09 10:14:45 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/09 11:12:03 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+void	ft_bzero(void *s, size_t n)
 {
-	int		i;
-	char	*arr;
+	unsigned char	*tmp;
+	int				i;
 
+	tmp = (unsigned char *)s;
 	i = 0;
-	arr = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (arr == NULL)
-		return (arr);
-	while (src[i])
+	while (n-- != 0)
 	{
-		arr[i] = src[i];
+		tmp[i] = 0;
 		i++;
 	}
-	arr[i] = '\0';
-	return (arr);
 }

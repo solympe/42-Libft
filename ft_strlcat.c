@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 13:52:31 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/06 18:31:04 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/08 20:29:13 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/09 12:58:12 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+size_t		ft_strlcat(char *dest, const char *src, size_t size)
 {
-	int		i;
-	char	*arr;
+	size_t	i;
+	size_t	j;
+	size_t	retur;
 
-	i = 0;
-	arr = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (arr == NULL)
-		return (arr);
-	while (src[i])
+	i = ft_strlen(dest);
+	j = 0;
+	retur = ft_strlen(src);
+	if (size <= i)
+		retur += size;
+	else
+		retur += i;
+	while (src[j] && i < size - 1)
 	{
-		arr[i] = src[i];
+		dest[i] = src[j];
 		i++;
+		j++;
 	}
-	arr[i] = '\0';
-	return (arr);
+	dest[i] = '\0';
+	return (retur);
 }
