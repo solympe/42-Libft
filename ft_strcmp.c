@@ -6,7 +6,7 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 16:05:18 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/08 16:11:03 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:53:44 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int		ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 || *s2)
 	{
-		if (*s1 > *s2)
-			return (*s1 - *s2);
+		if (*s1 != *s2)
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
 		s1++;
 		s2++;
 	}

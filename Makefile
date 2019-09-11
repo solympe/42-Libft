@@ -21,6 +21,7 @@ all: $(NAME)
 $(NAME) :
 	gcc $(FLAGS) -c -I $(HEADER) $(SRC)
 	ar rc $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJECTS)

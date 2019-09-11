@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 14:55:10 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/11 16:05:23 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/11 15:38:02 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/11 16:29:06 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
-int		main()
+void	ft_strdel(char **as)
 {
-	size_t	size = 514;
-	char	*ret = "wwwwwwwwwwwwwwwwwwwwwwwwww";
-
-	printf("%s\n", ret);
-	ret = ft_strnew(size);
-
-	printf("%s\n", ret);
-	printf("%s\n", "ALL RIGHT");
+	if (as && *as)
+	{
+		ft_memdel((void **)as);
+	}
 }

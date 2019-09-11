@@ -6,7 +6,7 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 16:21:26 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/09 15:25:18 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/11 17:07:25 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		return_atoi(const char *nptr, int i, int checker)
 {
-	int		res;
-	int		pow;
+	long long int		res;
+	long long int		pow;
 	int		a;
 
 	pow = 1;
@@ -30,13 +30,13 @@ int		return_atoi(const char *nptr, int i, int checker)
 		a++;
 		i--;
 		pow *= 10;
-		if (a == 10 && res < 0 && checker != 1)
+		if (a >= 19 && res < 0 && checker != 1)
+			return (-1);
+		if (a >= 19 && res > 0 && checker != 0)
 			return (0);
 	}
 	if (checker != 0)
 		res *= -1;
-	if (a == 10 && res > 0 && checker == 1)
-			return (0);
 	return (res);
 }
 

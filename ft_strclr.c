@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 14:55:10 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/11 16:05:23 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/11 15:38:25 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/11 17:01:51 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
-int		main()
+void	ft_strclr(char *s)
 {
-	size_t	size = 514;
-	char	*ret = "wwwwwwwwwwwwwwwwwwwwwwwwww";
+	size_t	i;
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+		i++;
+	s = ft_memset(s, '\0', i);
 
-	printf("%s\n", ret);
-	ret = ft_strnew(size);
-
-	printf("%s\n", ret);
-	printf("%s\n", "ALL RIGHT");
 }

@@ -6,7 +6,7 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 14:22:14 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/08 14:40:07 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/10 20:07:27 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const	char	*tmp;
 
+	if (c == '\0')
+	{
+		while (*s)
+			s++;
+		tmp = &(*s);
+		return ((char *)tmp);
+	}
 	tmp = 0;
 	while (*s)
 	{

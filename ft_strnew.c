@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 14:55:10 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/11 16:05:23 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/11 15:45:44 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/11 16:17:29 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
-int		main()
+char	*ft_strnew(size_t size)
 {
-	size_t	size = 514;
-	char	*ret = "wwwwwwwwwwwwwwwwwwwwwwwwww";
+	char	*str;
 
-	printf("%s\n", ret);
-	ret = ft_strnew(size);
-
-	printf("%s\n", ret);
-	printf("%s\n", "ALL RIGHT");
+	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
+		return (NULL);
+	ft_memset(str, '\0', size);
+	str[size] = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 20:29:13 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/09 12:58:12 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/10 19:31:13 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ size_t		ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	j;
 	size_t	retur;
 
-	i = ft_strlen(dest);
 	j = 0;
+	if (!size)
+		return (0);
+	i = ft_strlen(dest);
 	retur = ft_strlen(src);
 	if (size <= i)
 		retur += size;

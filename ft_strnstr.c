@@ -6,52 +6,36 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 15:52:43 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/09 13:16:45 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:23:56 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		yes1(const char *haystack, const char *needle, int i, int j)
-{
-	if (haystack[i] == needle[j])
-	{
-		while ((haystack[i] && needle[j]) && (haystack[i] == needle[j]))
-		{
-			i++;
-			j++;
-		}
-		if (needle[j] == '\0')
-			return (1);
-	}
-	return (0);
-}
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t		i;
-	int			j;
-	int			saver;
+	int 	i;
+	int 	j;
 
 	i = 0;
 	j = 0;
-	while (haystack[i] && i < len)
+	if ((ft_strlen(needle) == 0 && ft_strlen(haystack) == 0)
+		|| (ft_strlen(needle) == 0))
+		return ((char *)haystack);
+	if (ft_strlen(haystack) == 0)
+		return (0);
+	while (haystack[i] && len)
 	{
-		if (haystack[i] == needle[j])
+		j = 0;
+		while (needle[j] == haystack[i + j] && len)
 		{
-			saver = i;
-			if (yes1(haystack, needle, i, j))
-			{
-				i = saver;
-				return ((char *)&haystack[i]);
-			}
-			else
-			{
-				i = saver + 1;
-				j = 0;
-			}
+			j++;
+			if (needle[j] == '\0')
+				return ((char *)haystack + i);
+			len--;
 		}
 		i++;
+		len--;
 	}
 	return (0);
 }
