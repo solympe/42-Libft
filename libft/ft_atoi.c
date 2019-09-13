@@ -14,9 +14,9 @@
 
 int		return_atoi(const char *nptr, int i, int checker)
 {
-	long long int		res;
-	long long int		pow;
-	int		a;
+	long long int	res;
+	long long int	pow;
+	int				a;
 
 	pow = 1;
 	a = 0;

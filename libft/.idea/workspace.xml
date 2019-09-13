@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6c8cfcf5-2c2b-4335-98e2-2f72d9d645e0" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/git_version" />
+  </component>
+  <component name="ProjectId" id="1QSJl8aKz93f6oV34ZE3FtmbtnR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/clean" />
+      <recent name="$PROJECT_DIR$/git_version" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c8cfcf5-2c2b-4335-98e2-2f72d9d645e0" name="Default Changelist" comment="" />
+      <created>1567760741676</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567760741676</updated>
+      <workItem from="1567760764177" duration="2637000" />
+      <workItem from="1567768124772" duration="503000" />
+      <workItem from="1567768925564" duration="1090000" />
+      <workItem from="1567770472414" duration="98000" />
+      <workItem from="1567770632335" duration="15698000" />
+      <workItem from="1567839839685" duration="980000" />
+      <workItem from="1567840932042" duration="397000" />
+      <workItem from="1567841332534" duration="276000" />
+      <workItem from="1567841611288" duration="3517000" />
+      <workItem from="1567864973803" duration="202000" />
+      <workItem from="1567928934609" duration="294000" />
+      <workItem from="1567937869383" duration="21757000" />
+      <workItem from="1568012852056" duration="4963000" />
+      <workItem from="1568022575997" duration="9440000" />
+      <workItem from="1568033557534" duration="3310000" />
+      <workItem from="1568102466353" duration="4923000" />
+      <workItem from="1568115631198" duration="1242000" />
+      <workItem from="1568116902298" duration="15355000" />
+      <workItem from="1568189198807" duration="9760000" />
+      <workItem from="1568201866830" duration="22000" />
+      <workItem from="1568202281163" duration="2872000" />
+      <workItem from="1568205544511" duration="364000" />
+      <workItem from="1568205951886" duration="3708000" />
+      <workItem from="1568209667518" duration="2363000" />
+      <workItem from="1568212035910" duration="875000" />
+      <workItem from="1568212914466" duration="1732000" />
+      <workItem from="1568214650873" duration="386000" />
+      <workItem from="1568215039652" duration="496000" />
+      <workItem from="1568215538019" duration="2197000" />
+      <workItem from="1568274499945" duration="2178000" />
+      <workItem from="1568276736697" duration="3234000" />
+      <workItem from="1568280692293" duration="2564000" />
+      <workItem from="1568283700772" duration="194000" />
+      <workItem from="1568286265365" duration="3388000" />
+      <workItem from="1568294466566" duration="2354000" />
+      <workItem from="1568297481906" duration="3173000" />
+      <workItem from="1568300800393" duration="1688000" />
+      <workItem from="1568302643440" duration="572000" />
+      <workItem from="1568304125833" duration="251000" />
+      <workItem from="1568304468270" duration="369000" />
+      <workItem from="1568304843490" duration="588000" />
+      <workItem from="1568306311237" duration="286000" />
+      <workItem from="1568306601530" duration="1297000" />
+      <workItem from="1568308187354" duration="920000" />
+      <workItem from="1568360387464" duration="3054000" />
+      <workItem from="1568365316134" duration="2087000" />
+      <workItem from="1568370081870" duration="4517000" />
+      <workItem from="1568377277196" duration="1943000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
