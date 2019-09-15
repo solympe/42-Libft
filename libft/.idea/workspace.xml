@@ -29,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -113,7 +113,12 @@
       <workItem from="1568459036453" duration="18036000" />
       <workItem from="1568534222905" duration="3352000" />
       <workItem from="1568538369466" duration="2964000" />
-      <workItem from="1568546212145" duration="2368000" />
+      <workItem from="1568546212145" duration="2608000" />
+      <workItem from="1568550589846" duration="8000" />
+      <workItem from="1568550599600" duration="2267000" />
+      <workItem from="1568555944878" duration="68000" />
+      <workItem from="1568556086507" duration="632000" />
+      <workItem from="1568556721316" duration="2429000" />
     </task>
     <servers />
   </component>

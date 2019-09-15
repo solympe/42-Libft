@@ -6,7 +6,7 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 17:11:14 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/14 12:37:45 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/15 17:57:36 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,19 +87,19 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	if (!c)
 	{
-		arr = (char **)malloc(sizeof(char *));
+		arr = (char **)malloc(sizeof(char *) + 1);
 		arr[0] = ft_strnew(ft_strlen(s));
 		arr[0] = (char *)s;
+		arr[1] = 0x00;
 		return (arr);
 	}
 	ai = 0;
 	i = 0;
 	num = 0;
-	while (s[i])
+	while (s[i++])
 	{
 		if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
 			num++;
-		i++;
 	}
 	arr = make_array(s, c, num, ai);
 	return (arr);

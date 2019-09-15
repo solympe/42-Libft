@@ -6,7 +6,7 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 13:15:16 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/14 17:53:18 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/15 16:58:30 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_swap(int *a, int *b);
+void				ft_div_mod(int a, int b, int *div, int *mod);
+int					ft_result(int a, int b, char c);
+int					ft_count_if(char **tab, int (*f)(char*));
+int					ft_sqrt(int nb);
 #endif
