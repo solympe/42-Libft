@@ -6,25 +6,18 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 14:55:10 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/13 15:42:17 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/15 14:58:54 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
-#include <stdlib.h>
 
-int		main()
+int	main()
 {
 
+	printf("%d\n", ft_strnequ("abcde", "abdfe", 2));
 
-
-	int i = -123;
-
-	char	*res1 = ft_itoa(i);
-
-	printf("%s\n", res1);
-	printf("%s\n", "---------------------------------------");
-	printf("%s\n", "ALL RIGHT");
+	return (0);
 }

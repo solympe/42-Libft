@@ -6,13 +6,13 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 18:06:33 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/13 15:54:42 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/13 16:09:23 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    minus_symb(int *n, int *nt)
+static void	minus_symb(int *n, int *nt)
 {
 	if (*n < 0)
 	{
@@ -20,12 +20,14 @@ void    minus_symb(int *n, int *nt)
 		*nt = 1;
 	}
 }
-char    *ft_itoa(int n)
+
+char		*ft_itoa(int n)
 {
-	int        tmpn;
-	int        len;
-	int        nt;
-	char    *str;
+	int		tmpn;
+	int		len;
+	int		nt;
+	char	*str;
+
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	tmpn = n;

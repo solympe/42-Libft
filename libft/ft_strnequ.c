@@ -6,7 +6,7 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 18:25:26 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/12 12:39:50 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/15 15:02:32 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,25 @@
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	size_t	i;
-	size_t	j;
+	size_t	saver;
 
 	if (!s1 || !s2)
 		return (0);
 	i = 0;
-	j = ft_strlen(s1);
+	saver = n;
 	if (!*s1 && !*s2)
 		return (1);
-	while (*s1 && *s2)
+	while (*s1 && *s2 && n)
 	{
-		if (*s1 == *s2 && n--)
+		if (*s1 == *s2)
+		{
+			n--;
 			i++;
+		}
 		s1++;
 		s2++;
 	}
-	if ((*s1 == '\0' && *s2 == '\0') && (i == j))
+	if ((i == saver) || s1 == s2)
 		return (1);
 	return (0);
 }

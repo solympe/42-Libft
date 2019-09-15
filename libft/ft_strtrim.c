@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_return(char const *s, int i, int j, int z)
+static char	*ft_return(char const *s, int i, int j, int z)
 {
 	char	*tmp;
 
@@ -28,7 +28,7 @@ char	*ft_return(char const *s, int i, int j, int z)
 	return (tmp);
 }
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
 	char	*tmp;
 	size_t	i;
