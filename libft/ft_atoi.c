@@ -6,37 +6,44 @@
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 16:21:26 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/15 11:16:29 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/15 20:31:58 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	return_atoi(const char *nptr, int i, int checker, int space)
 {
 	long long int	res;
 	long long int	pow;
 	int				a;
+	int 			j;
 
 	pow = 1;
 	a = 0;
 	res = 0;
+	j = 0;
+
+	while (nptr[j] == '0')
+		j++;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 		i++;
-	i--;
+	i -= j + 1;
 	while (i >= 0 && nptr[i] != '+' && nptr[i] != '-' && i >= space)
 	{
 		res += (nptr[i] - '0') * pow;
 		a++;
 		i--;
 		pow *= 10;
-		if (a >= 19 && res < 0 && checker != 1)
-			return (-1);
-		if (a >= 19 && res > 0 && checker != 0)
-			return (0);
 	}
 	if (checker != 0)
 		res *= -1;
+	if (a >= 18 && res < 0 && checker != 1)
+		return (-1);
+	printf("%s\n", "eeee");
+	if (a >= 18 && res > 0 && checker != 0)
+		return (0);
 	return (res);
 }
 
@@ -61,7 +68,12 @@ int			ft_atoi(const char *nptr)
 			checker = 1;
 		i++;
 	}
-	if (nptr[i] < '0' || nptr[i] > '9')
-		return (0);
 	return (return_atoi(nptr, i, checker, space));
+}
+
+int		main()
+{
+	char	*s = "0000000000000000000000922337203";
+	printf("%d", ft_atoi(s));
+	return (0);
 }
