@@ -6,17 +6,25 @@
 /*   By: solympe <solympe@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 17:52:34 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/14 19:03:11 by solympe          ###   ########.fr       */
+/*   Updated: 2019/09/16 12:25:10 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+static void		clear_list(void *content, size_t content_size)
 {
-	t_list	*saver;
-	t_list	*newl;
+	if (content_size)
+		free(content);
+}
 
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+{
+	t_list		*saver;
+	t_list		*newl;
+
+	if (!lst || !f)
+		return (NULL);
 	newl = f(lst);
 	if (lst == NULL)
 		return (NULL);
@@ -26,7 +34,11 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		lst = lst->next;
 		saver->next = f(lst);
 		if (saver->next == NULL)
+		{
+			if (newl)
+				ft_lstdel(&newl, clear_list);
 			return (NULL);
+		}
 		saver = saver->next;
 	}
 	return (newl);

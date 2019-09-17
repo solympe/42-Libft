@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strenqu.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 18:25:26 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/15 19:17:14 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/12 11:25:25 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/15 18:55:03 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
+	char	*tmp;
 	size_t	i;
-	size_t	saver;
 
-	if (!s1 || !s2)
-		return (0);
 	i = 0;
-	saver = n;
-	if ((!*s1 && !*s2) || n == 0)
-		return (1);
-	while ((*s1 != '\0') && (*s2 != '\0') && n)
+	if (!s || !s[0])
+		return (ft_memalloc(1));
+	if (!(tmp = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	while (s[start] && len--)
 	{
-		if (*s1 == *s2)
-		{
-			n--;
-			i++;
-			if (i == saver || ((*(s1 + 1) == '\0') && (*(s2 + 1) == '\0')))
-				return (1);
-		}
-		s1++;
-		s2++;
+		tmp[i] = s[start];
+		i++;
+		start++;
 	}
-	return (0);
+	tmp[i] = '\0';
+	return (tmp);
 }

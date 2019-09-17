@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: solympe <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: solympe <solympe@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 14:22:14 by solympe           #+#    #+#             */
-/*   Updated: 2019/09/14 10:30:04 by solympe          ###   ########.fr       */
+/*   Created: 2019/09/14 16:06:43 by solympe           #+#    #+#             */
+/*   Updated: 2019/09/14 18:16:36 by solympe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	const	char	*tmp;
+#include "libft.h"
 
-	if (c == '\0')
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
+	t_list	*list;
+
+	if (!alst || !*alst || !del)
+		return ;
+	list = *alst;
+	while (*alst != NULL)
 	{
-		while (*s)
-			s++;
-		tmp = &(*s);
-		return ((char *)tmp);
+		list = (*alst)->next;
+		del(*alst, (*alst)->content_size);
+		*alst = list;
 	}
-	tmp = 0;
-	while (*s)
-	{
-		if (*s == c)
-		{
-			tmp = &(*s);
-		}
-		s++;
-	}
-	return ((char *)tmp);
 }
