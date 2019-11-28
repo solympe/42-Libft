@@ -1,6 +1,10 @@
 # Libft - go to hell
 
+Not interesting, just a practice
+
 <b>Each</b> of this functions was written manually
+The most part of functions were recreated from original functions. 
+This task showed me how the library works in its own and how can i compile my own libraries
 
 This is my project work on school21 in C language
 
